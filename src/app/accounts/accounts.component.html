@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts</title>
+</head>
+<body>
+    <div class="container" id="container" [ngClass]="{'right-panel-active': isRightPanelActive}">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>ĐĂNG KÝ</h1>
+                <div class="social-container">
+                    <a href="#" class="social social_hover_fb"><fa-icon [icon]="faFacebook"></fa-icon></a>
+                    <a href="#" class="social social_hover_g"><fa-icon [icon]="faGooglePlusG"></fa-icon></a>
+                </div>
+                <span>hoặc đăng ký bằng email của bạn</span>
+                <input type="text" placeholder="Name" />
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <button>Đăng Ký</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#">
+                <h1>ĐĂNG NHẬP</h1>
+                <div class="social-container">
+                    <a href="#" class="social social_hover_fb"><fa-icon [icon]="faFacebook"></fa-icon></a>
+                    <a href="#" class="social social_hover_g"><fa-icon [icon]="faGooglePlusG"></fa-icon></a>
+                </div>
+                <span>hoặc đăng nhập bằng email của bạn</span>
+                <input type="email" placeholder="Email" />
+                <input type="password" placeholder="Password" />
+                <a href="#">Quên mật khẩu?</a>
+                <button>Đăng nhập</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left mg_hd">
+                    <h1>CHÀO MỪNG BẠN ĐẾN VỚI TRANG SỨC LYRA</h1>
+                    <img src="assets/Images/Logo/Logo.png" alt="">
+                    <p>Nếu bạn đã có tài khoản từ trước, hãy đăng nhập vào tài khoản của mình</p>
+                    <button class="ghost" id="signIn" (click)="togglePanel()">ĐĂNG NHẬP</button>
+                </div>
+                <div class="overlay-panel overlay-right mg_hd">
+                    <h1>CHÀO MỪNG BẠN ĐẾN VỚI TRANG SỨC LYRA</h1>
+                    <img src="assets/Images/Logo/Logo.png" alt="">
+                    <p>Nếu bạn chưa có tài khoản bên Lyra, hãy đăng ký để nhận được các ưu đãi tốt nhất!</p>
+                    <button class="ghost" id="signUp" (click)="togglePanel()">ĐĂNG KÝ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
